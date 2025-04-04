@@ -93,3 +93,15 @@ variable "path_pattern" {
   type        = string
   default     = "/*"
 }
+
+variable "network_mode" {
+  description = "Network mode for the ECS service (awsvpc or bridge)"
+  type        = string
+  default     = "awsvpc"
+}
+
+variable "enable_service_connect" {
+  description = "Enable Service Connect (only applicable for awsvpc network mode)"
+  type        = bool
+  default     = true
+}
